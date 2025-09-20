@@ -6,13 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- CSS Eksternal-->
+    <!-- CSS Eksternal--> 
      <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
 
 <body>
+
+    <header>
+        <h1>Welcome to my mini Project</h1>
+        <h1 class="text-3xl font-bold">---Todo List ---</h1> 
     
+    </header>
+
+    <main> 
+        <form>
+            <input type="text" id="todo-input" placeholder="Add your todo here" class="border border-gray-300 rounded px-2 py-1">
+            <input type="date" id="todo-date" class="border border-gray-300 rounded px-2 py-1"> 
+            <button type="button" onclick="addTodo()" class="bg-blue-500 text-white rounded px-2 py-1 ml-2 py-1">
+                Add Todo </button>
+
+            <!-- Filter -->
+             <p>
+            <input type="button" id="filter-input" placeholder="Filter todos" class="bg-blue-500 text-white rounded px-2 py-1 ml-2" onclick="filterTodos()" value="Filter">
+            <ul id="todo-list" class="mt-4 list-disc list-inside"></ul>
+
+            <input type="button" id="delete-all" class="bg-red-600 px-2 py-2 rounded mb-2 py-1 mt-4 ml-80 " onclick="deleteAllTodos()" value="Delete All Todos">
+                </p>
+        </button>
+
+
+        </form>
+        
+    </main>
+    
+    <footer> 
+        <p>&copy; 2025 Esa Project</p>
+    </footer>
+
     <!-- JS Eksternal-->
      <script src="js/script.js"></script>
 </body>
